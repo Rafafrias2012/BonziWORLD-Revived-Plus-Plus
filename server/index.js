@@ -13,8 +13,7 @@ try {
 	if (e.code == "ENOENT") {
 		try {
 			fs.copySync(
-				'settings.example.json',
-				'settings.json'
+				'settings.example.json'
 			);
 			console.log("Created new settings file.");
 		} catch(e) {
@@ -29,7 +28,7 @@ try {
 }
 
 // Load settings into memory
-const settings = require("./settings.json");
+const settings = require("./settings.example.json");
 
 // Setup basic express server
 
